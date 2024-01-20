@@ -5,7 +5,7 @@ using UnityEngine;
 public class ThrowGuy : SmallGuyAction
 {
     
-    public override void OnCast() {
+    public override void Cast() {
         
     }
 }
