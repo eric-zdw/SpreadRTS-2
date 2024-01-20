@@ -36,7 +36,11 @@ public class PlayerControl : NetworkBehaviour
     void OnMove(InputValue value) {
         var dir = value.Get<Vector2>();
 
+<<<<<<< HEAD
+        //print("ID " + OwnerClientId + ": " + IsOwner);
+=======
         print("ID " + OwnerClientId + ": " + IsOwner);
+>>>>>>> 3eb06d622e80a5bf2e508f9f9786a6f84ceb83e6
 
         if (IsOwner) {
             //print("is sending");
@@ -63,7 +67,11 @@ public class PlayerControl : NetworkBehaviour
 
     void FixedUpdate() {
         Vector3 translatedVector = (transform.right * walkDirection.x) + (transform.forward * walkDirection.y);
+<<<<<<< HEAD
+        //print("transled " + translatedVector);
+=======
         print("transled " + translatedVector);
+>>>>>>> 3eb06d622e80a5bf2e508f9f9786a6f84ceb83e6
         walkVelocity += moveSpeed * Time.deltaTime * new Vector2(translatedVector.x, translatedVector.z);
 
         GetComponent<CharacterController>().Move(new Vector3(walkVelocity.x, 0f, walkVelocity.y) * Time.deltaTime);
@@ -74,7 +82,11 @@ public class PlayerControl : NetworkBehaviour
         }
         walkVelocity *= slowFactor;
         
+<<<<<<< HEAD
+        //print(slowFactor);
+=======
         print(slowFactor);
+>>>>>>> 3eb06d622e80a5bf2e508f9f9786a6f84ceb83e6
     }
     
 }
